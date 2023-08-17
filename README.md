@@ -20,7 +20,7 @@ This repository serves as a starter for creating a Chrome extension using React,
 
 ## Important Notes
 
-- This starter is tailored for developers looking to manipulate the DOM and use React within a Chrome extension. If you're not planning to do that, a more straightforward NodeJS template that outputs a single `content.js` might be more appropriate.
+- /content folder assumes that you are looking to manipulate the DOM using React. If you're not planning to do that, a more straightforward NodeJS template that outputs a single `content.js` might be more appropriate.
   
 ## Usage
 
