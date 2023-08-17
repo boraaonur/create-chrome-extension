@@ -1,0 +1,17 @@
+{
+  "name": "create-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "create-chrome-extension": "./bin/cli.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build-content": "cd content && npm run build",
+    "build-popup": "cd popup && npm run build",
+    "build": "npm run build-content && npm run build-popup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
