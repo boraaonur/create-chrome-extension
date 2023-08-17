@@ -32,7 +32,7 @@ npx boraaonur/create-chrome-extension
 ```
 Or if the above doesn't work:
 ```
-npm exec boraaonur/create-node-ts
+npm exec boraaonur/create-chrome-extension
 ```
 
 Feel free to fork this repository if you'd like to make changes tailored to your needs.
