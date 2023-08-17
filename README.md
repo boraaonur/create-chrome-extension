@@ -4,6 +4,12 @@ This repository serves as a starter for creating a Chrome extension using React,
 
 ## Structure
 
+### `/popup` folder
+- **Purpose:** Represents the Chrome extension's popup.
+- **Technical Details:**
+  - Built using React.
+  - Uses React DOM Memory Router by default for routing. 
+
 ### `/content` folder
 - **Purpose:** Used to inject into webpages.
 - **Technical Details:** 
@@ -11,13 +17,6 @@ This repository serves as a starter for creating a Chrome extension using React,
   - Utilizes MutationObserver for efficient injection.
   - Configured with Vite to produce a single `content.js` file.
   - Tailwind is also configured but slightly differently than `/popup`.
-
-### `/popup` folder
-- **Purpose:** Represents the Chrome extension's popup.
-- **Technical Details:**
-  - Built using React.
-  - Uses React DOM Memory Router by default for routing. If this feels like overkill for your use case, consider using the `simple-extension-router` package.
-  - Tailwind, Vite, and TypeScript are utilized.
 
 ## Important Notes
 
