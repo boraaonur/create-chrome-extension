@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "create-chrome-extension": "./bin/cli.js"
+    "create-chrome-extension": "./bin/dist/cli.js"
   },
-  "main": "index.js",
   "scripts": {
     "build-content": "cd content && npm run build",
     "build-popup": "cd popup && npm run build",

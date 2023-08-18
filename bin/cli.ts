@@ -1,19 +1,10 @@
 #!/usr/bin/env node
 
-const { execSync } = require("child_process");
-const readline = require("readline");
-const fs = require("fs");
-const path = require("path");
+import { runCommand, updatePackageJson } from "./utils";
 
-const runCommand = (command) => {
-  try {
-    execSync(`${command}`, { stdio: "inherit" });
-  } catch (e) {
-    console.error(`Failed to execute ${command}`);
-    return false;
-  }
-  return true;
-};
+import readline from "readline";
+import fs from "fs";
+import path from "path";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -40,15 +31,18 @@ rl.question("What project name do you want to use? ", (answer) => {
   // Remove the empty 'create-chrome-extension' directory
   fs.rmdirSync(sourcePath);
 
-  // Installing dependencies
-  console.log("Installing dependencies...");
-  const installedDeps = runCommand(`cd ${userProjectDir} && npm install`);
-  if (!installedDeps) process.exit(-1);
-
   // Clean unnecessary files and folders
   console.log("Cleaning...");
   runCommand(`rm -rf ${userProjectDir}/bin`);
   runCommand(`rm ${userProjectDir}/README.md`);
+  // runCommand(`rm ${userProjectDir}/package-lock.json`);
+
+  // Change name in package.json aswell
+  updatePackageJson(userProjectDir);
+
+  // Installing dependencies
+  console.log("Installing dependencies...");
+  runCommand(`cd ${userProjectDir} && npm install`);
 
   console.log("Chrome Extension Starter project is created.");
   console.log(`cd ${userProjectDir} && npm start`);
