@@ -36,6 +36,7 @@ rl.question("What project name do you want to use? ", (answer) => {
   runCommand(`rm -rf ${userProjectDir}/bin`);
   runCommand(`rm ${userProjectDir}/README.md`);
   // runCommand(`rm ${userProjectDir}/package-lock.json`);
+  runCommand(`rm -rf ${userProjectDir}/.git*`);
 
   // Change name in package.json aswell
   updatePackageJson(userProjectDir);
