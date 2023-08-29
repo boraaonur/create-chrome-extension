@@ -2,6 +2,9 @@
 
 This repository serves as a starter for creating a Chrome extension using React, Vite, Tailwind, and TypeScript.
 
+![Thumbnail](thumbnail.png)
+
+
 ## Structure
 
 ### `/popup` folder

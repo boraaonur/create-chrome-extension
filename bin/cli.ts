@@ -35,6 +35,7 @@ rl.question("What project name do you want to use? ", (answer) => {
   console.log("Cleaning...");
   runCommand(`rm -rf ${userProjectDir}/bin`);
   runCommand(`rm ${userProjectDir}/README.md`);
+  runCommand(`rm ${userProjectDir}/thumbnail.png`);
   // runCommand(`rm ${userProjectDir}/package-lock.json`);
   runCommand(`rm -rf ${userProjectDir}/.git*`);
 
